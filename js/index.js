@@ -30,10 +30,21 @@ destination.addEventListener ("wheel", function(event) { 
         alert('Did it work?!')
     })
 
+    // window.addEventListener('scroll', ()=>{
+    //     alert('Hold your horses!')
+    // })
 
+    const tester = document.querySelector(".footer")
+
+    document.addEventListener('keydown', logKey);
+    function logKey (e) {
+        tester.textContent += `${e.code}`;
+    }
 
     // const destination = document.querySelector(".content-destination")
     
     // destination.addEventListener('dblclick', function () {
     //     destination.toggle('large');
     //   });
+
+ 

@@ -1,5 +1,15 @@
 // Your code goes here
 
+const navigator = (document.querySelector(".nav"));
+
+// navigator.addEventListener.('click' , event =>{
+//     event.preventDefault();
+// })
+
+navigator.addEventListener('click', (event) => {
+    event.preventDefault();
+  });
+
 const letsGo  = document.querySelector(".text-content");
 
 letsGo.addEventListener("mouseover", function (event){   
@@ -12,8 +22,9 @@ letsGo.addEventListener("mouseover", function (event){
     }, 500);
   }, false);
 
-//   keydown
-
+//   window.addEventListener('load', (event) => {
+//         alert('page is fully loaded');
+// });
 
 const destination = document.querySelector(".intro");
 
@@ -21,7 +32,7 @@ destination.addEventListener ("wheel", function(event) { 
        
     document.body.style.backgroundImage = "url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)" 
     
-    setTimeout(function(){
+    setTimeout(function(event){
         event.body.style.backgroundImage = "";
     }, 10);
     }, false);
@@ -41,10 +52,20 @@ destination.addEventListener ("wheel", function(event) { 
         tester.textContent += `${e.code}`;
     }
 
-    // const destination = document.querySelector(".content-destination")
+    const update = document.querySelector('.destination');
     
-    // destination.addEventListener('dblclick', function () {
-    //     destination.toggle('large');
-    //   });
+    update.addEventListener('dblclick', event => {
+        event.target.style.backgroundColor = 'yellow';
+    })
 
- 
+
+
+    const vacation = document.querySelector('.content-destination');
+    
+    // vacation.addEventListener('focus', (vacation) => {
+    //     vacation.target.style.backgroundColor = 'red';    
+    //   }, true)
+
+      update.addEventListener('dblclick', event => {
+        event.target.style.backgroundColor = 'yellow';
+    })
